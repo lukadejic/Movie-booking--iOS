@@ -2,7 +2,8 @@
 import SwiftUI
 
 class ScrollSectionViewModel: ObservableObject {
-    let title: String
+    @Published
+    var title: String
     let movies: [Movie]
     
     @Published
@@ -12,18 +13,16 @@ class ScrollSectionViewModel: ObservableObject {
         self.title = title
         self.movies = movies
     }
-    
-    
 }
 
-struct ScrollSection1: View {
-    @State var title: String = "Trenutno se emituje"
-//    @State var movies1: [Movie] = Movie.movies1
-//    @State var movies: [Movie] = []
+struct ScrollSection: View {
+    
+    @State var movies: [Movie] = []
     @State
     var isShowingDetail = false
     
-    @State var selectedMovie: Movie?
+    @State 
+    var selectedMovie: Movie?
     
     @ObservedObject
     var viewModel: ScrollSectionViewModel
@@ -35,7 +34,7 @@ struct ScrollSection1: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
-                Text(title)
+                Text(viewModel.title)
                     .fontWeight(.bold)
                     .font(.title2)
                     .foregroundColor(.white)

@@ -73,6 +73,6 @@ struct VideoPlayer: UIViewRepresentable {
     }
 }
 
-#Preview {
-    VideoPlayerView(movie: Movie.sampleMovie, movieTrailer:"O2NKzO-fxwQ")
-}
+//#Preview {
+//    VideoPlayerView(movie: Movie.sampleMovie, movieTrailer:"O2NKzO-fxwQ")
+//}

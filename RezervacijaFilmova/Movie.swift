@@ -2,8 +2,8 @@ import UIKit
 import Foundation
 import SwiftUI
 
-struct Movie: Codable, Identifiable , Equatable{
-    let id = UUID()
+struct Movie: Codable, Identifiable , Equatable, Hashable{
+    var id = UUID()
     let title: String
     let year: Int
     let trailer: String
@@ -11,7 +11,7 @@ struct Movie: Codable, Identifiable , Equatable{
     let href, extract: String
     let thumbnail: String
     let thumbnailWidth, thumbnailHeight: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case title, year, cast, genres, href, extract, thumbnail, trailer
         case thumbnailWidth = "thumbnail_width"
@@ -30,7 +30,8 @@ struct Movie: Codable, Identifiable , Equatable{
     static let movies4 : [Movie] = [allMovies[15], allMovies[16],allMovies[17],allMovies[18],allMovies[19]]
 }
 
-struct MovieResponse: Decodable {
+
+struct MovieResponse1: Decodable {
     let request : [Movie]
 }
 
@@ -55,9 +56,9 @@ extension Bundle{
     }
 }
 
-final class JSONManager {
+    final class JSONManager1 {
     
-    static let shared = JSONManager()
+    static let shared = JSONManager1()
     private let cache = NSCache < NSString, UIImage >()
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
@@ -76,7 +77,7 @@ final class JSONManager {
         
         do{
             let decoder = JSONDecoder()
-            return try decoder.decode(MovieResponse.self, from: data).request
+            return try decoder.decode(MovieResponse1.self, from: data).request
         }catch{
             fatalError("Invalid url")
         }

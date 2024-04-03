@@ -15,10 +15,7 @@
 		FA5CB1452B9D12AC00286A59 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1442B9D12AC00286A59 /* HomeView.swift */; };
 		FA5CB1482B9D170A00286A59 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1472B9D170A00286A59 /* RemoteImage.swift */; };
 		FA5CB14A2B9D192D00286A59 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1492B9D192D00286A59 /* MovieListCell.swift */; };
-		FA5CB14C2B9D1C0E00286A59 /* ScrollSection1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB14B2B9D1C0E00286A59 /* ScrollSection1.swift */; };
-		FA5CB14E2B9DCDD600286A59 /* ScrollSeciton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB14D2B9DCDD600286A59 /* ScrollSeciton2.swift */; };
-		FA5CB1512B9DD05300286A59 /* ScrollSection3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1502B9DD05300286A59 /* ScrollSection3.swift */; };
-		FA5CB1532B9DD14C00286A59 /* ScrollSection4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1522B9DD14C00286A59 /* ScrollSection4.swift */; };
+		FA5CB14C2B9D1C0E00286A59 /* ScrollSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB14B2B9D1C0E00286A59 /* ScrollSection.swift */; };
 		FA5CB1552B9DD45400286A59 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1542B9DD45400286A59 /* CustomSearchBar.swift */; };
 		FA5CB1572B9DD52900286A59 /* CustomBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1562B9DD52900286A59 /* CustomBackground.swift */; };
 		FA5CB1592B9E4E7B00286A59 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1582B9E4E7B00286A59 /* ProfileView.swift */; };
@@ -42,6 +39,7 @@
 		FA7C32382B9C7F92002AB479 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7C32372B9C7F92002AB479 /* Preview Assets.xcassets */; };
 		FA7C32412B9C8232002AB479 /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C32402B9C8232002AB479 /* TabData.swift */; };
 		FA7C32442B9C82CB002AB479 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C32432B9C82CB002AB479 /* CustomTabBar.swift */; };
+		FAA8FE042BB82D9D006EF780 /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8FE032BB82D9D006EF780 /* MoviesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,10 +51,7 @@
 		FA5CB1442B9D12AC00286A59 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA5CB1472B9D170A00286A59 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		FA5CB1492B9D192D00286A59 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
-		FA5CB14B2B9D1C0E00286A59 /* ScrollSection1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSection1.swift; sourceTree = "<group>"; };
-		FA5CB14D2B9DCDD600286A59 /* ScrollSeciton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSeciton2.swift; sourceTree = "<group>"; };
-		FA5CB1502B9DD05300286A59 /* ScrollSection3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSection3.swift; sourceTree = "<group>"; };
-		FA5CB1522B9DD14C00286A59 /* ScrollSection4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSection4.swift; sourceTree = "<group>"; };
+		FA5CB14B2B9D1C0E00286A59 /* ScrollSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSection.swift; sourceTree = "<group>"; };
 		FA5CB1542B9DD45400286A59 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		FA5CB1562B9DD52900286A59 /* CustomBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackground.swift; sourceTree = "<group>"; };
 		FA5CB1582B9E4E7B00286A59 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -82,6 +77,7 @@
 		FA7C32372B9C7F92002AB479 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA7C32402B9C8232002AB479 /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
 		FA7C32432B9C82CB002AB479 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		FAA8FE032BB82D9D006EF780 /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +114,7 @@
 		FA5CB14F2B9DD04000286A59 /* ScrollSections */ = {
 			isa = PBXGroup;
 			children = (
-				FA5CB14D2B9DCDD600286A59 /* ScrollSeciton2.swift */,
-				FA5CB14B2B9D1C0E00286A59 /* ScrollSection1.swift */,
-				FA5CB1502B9DD05300286A59 /* ScrollSection3.swift */,
-				FA5CB1522B9DD14C00286A59 /* ScrollSection4.swift */,
+				FA5CB14B2B9D1C0E00286A59 /* ScrollSection.swift */,
 			);
 			path = ScrollSections;
 			sourceTree = "<group>";
@@ -175,6 +168,7 @@
 			children = (
 				FA5CB1442B9D12AC00286A59 /* HomeView.swift */,
 				FA75D4CF2BB825B200BAC176 /* HomeViewModel.swift */,
+				FAA8FE032BB82D9D006EF780 /* MoviesService.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -329,12 +323,10 @@
 				FA5CB16B2BA073FC00286A59 /* BackButton.swift in Sources */,
 				FA5CB1552B9DD45400286A59 /* CustomSearchBar.swift in Sources */,
 				FA5CB1702BA0844C00286A59 /* DateButton.swift in Sources */,
-				FA5CB1512B9DD05300286A59 /* ScrollSection3.swift in Sources */,
 				FA5CB1742BA0A3F200286A59 /* StatusUI.swift in Sources */,
 				FA7C32322B9C7F8F002AB479 /* ContentView.swift in Sources */,
 				FA5CB15C2B9E61C800286A59 /* User.swift in Sources */,
 				FA5CB1722BA09DD500286A59 /* SeatsView.swift in Sources */,
-				FA5CB1532B9DD14C00286A59 /* ScrollSection4.swift in Sources */,
 				FA5CB14A2B9D192D00286A59 /* MovieListCell.swift in Sources */,
 				FA5CB1482B9D170A00286A59 /* RemoteImage.swift in Sources */,
 				FA5CB1592B9E4E7B00286A59 /* ProfileView.swift in Sources */,
@@ -343,14 +335,14 @@
 				FA5CB1452B9D12AC00286A59 /* HomeView.swift in Sources */,
 				FA5CB1422B9D0D6100286A59 /* Movie.swift in Sources */,
 				FA0B04C12BA33F2F0048E8D9 /* CustomChair.swift in Sources */,
-				FA5CB14E2B9DCDD600286A59 /* ScrollSeciton2.swift in Sources */,
 				FA5CB15F2B9E621C00286A59 /* ProfileViewModel.swift in Sources */,
 				FA7C32302B9C7F8F002AB479 /* RezervacijaFilmovaApp.swift in Sources */,
 				FA5CB1762BA0AB2B00286A59 /* BuyButton.swift in Sources */,
 				FA5CB1572B9DD52900286A59 /* CustomBackground.swift in Sources */,
 				FA5CB1642B9F6F7E00286A59 /* BookingView.swift in Sources */,
 				FA0B04C52BA350920048E8D9 /* LocationView.swift in Sources */,
-				FA5CB14C2B9D1C0E00286A59 /* ScrollSection1.swift in Sources */,
+				FAA8FE042BB82D9D006EF780 /* MoviesService.swift in Sources */,
+				FA5CB14C2B9D1C0E00286A59 /* ScrollSection.swift in Sources */,
 				FA5CB1672B9FA27300286A59 /* MovieScrollCell.swift in Sources */,
 				FA0B04BF2BA21C850048E8D9 /* VideoPlayerView.swift in Sources */,
 			);

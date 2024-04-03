@@ -199,8 +199,8 @@ struct BookingView: View {
     }
 }
 
-struct BookingView_Preview: PreviewProvider {
-    static var previews: some View {
-        BookingView(movie: Movie.sampleMovie)
-    }
-}
+//struct BookingView_Preview: PreviewProvider {
+//    static var previews: some View {
+//        BookingView(movie: Movie.sampleMovie)
+//    }
+//}

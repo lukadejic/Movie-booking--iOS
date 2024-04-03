@@ -27,6 +27,6 @@ struct MovieScrollCell: View {
     }
 }
 
-#Preview {
-    MovieScrollCell(movie: Movie.sampleMovie)
-}
+//#Preview {
+//    MovieScrollCell(movie: Movie.sampleMovie)
+//}

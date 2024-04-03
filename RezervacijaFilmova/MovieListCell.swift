@@ -31,6 +31,6 @@ struct MovieListCell: View {
     }
 }
 
-#Preview {
-    MovieListCell(movie: Movie.sampleMovie)
-}
+//#Preview {
+//    MovieListCell(movie: Movie.sampleMovie)
+//}
