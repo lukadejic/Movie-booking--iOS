@@ -2,7 +2,8 @@ import SwiftUI
 import WebKit
 
 struct VideoPlayerView: View {
-    @Environment(\.dismiss) var dissmiss
+    @Environment(\.dismiss) 
+    var dissmiss
     let movie: Movie
     let movieTrailer: String
     var gradient = [Color(.black).opacity(0.8),Color(.purple)]
@@ -73,6 +74,6 @@ struct VideoPlayer: UIViewRepresentable {
     }
 }
 
-//#Preview {
-//    VideoPlayerView(movie: Movie.sampleMovie, movieTrailer:"O2NKzO-fxwQ")
-//}
+#Preview {
+    VideoPlayerView(movie: Movie.sampleMovie, movieTrailer:"O2NKzO-fxwQ")
+}

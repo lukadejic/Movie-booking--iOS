@@ -70,43 +70,21 @@ struct BookingView: View {
                                     isSelected: $viewModel.dates[index].isSelected,
                                     action: {
                                         viewModel.toggleDateSelection(index: index)
+                                        viewModel.isDateSelected.toggle()
                                     }
                                 )
                             }
                         }
-                      
-                        
                         HStack{
-                            TimeButton(hour: "17:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime1,action: {
-                                withAnimation {
-                                    viewModel.isSelectedTime1.toggle()
-                                }
-                            })
-                            
-                            TimeButton(hour: "18:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime2,action: {
-                                withAnimation{
-                                    viewModel.isSelectedTime2.toggle()
-                                }
-                            })
-                            
-                            TimeButton(hour: "19:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime3,action: {
-                                withAnimation{
-                                    viewModel.isSelectedTime3.toggle()
-                                }
-                            })
-
-                            TimeButton(hour: "20:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime4,action: {
-                                withAnimation{
-                                    viewModel.isSelectedTime4.toggle()
-                                }
-                            })
-
-                            TimeButton(hour: "21:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime5,action: {
-                                withAnimation{
-                                    viewModel.isSelectedTime5.toggle()
-                                }
-                            })
-
+                            ForEach(viewModel.times.indices, id: \.self){ index in
+                                TimeButton(hour: viewModel.times[index].hour, width: viewModel.times[index].width, height: viewModel.times[index].height, isSelected: $viewModel.times[index].isSelected,
+                                    action: {
+                                    withAnimation {
+                                        viewModel.toggleTimesSelection(index: index)
+                                        viewModel.isTimeSelected.toggle()
+                                    }
+                                })
+                            }
                         }
                         
                     }
@@ -146,7 +124,7 @@ struct BookingView: View {
                     } label: {
                         CustomButton()
                             .frame(height: 50)
-                            .offset(y: (viewModel.isSelectedTime1 || viewModel.isSelectedTime2 || viewModel.isSelectedTime3 || viewModel.isSelectedTime4 || viewModel.isSelectedTime5 ) && ( viewModel.isSelectedDate1 || viewModel.isSelectedDate2 || viewModel.isSelectedDate3 || viewModel.isSelectedDate4 || viewModel.isSelectedDate5  ) ? 0 : 200)
+                            .offset(y: (viewModel.isTimeSelected && viewModel.isDateSelected ) ? 0 : 200)
                         
                     }
       
