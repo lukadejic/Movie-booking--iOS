@@ -4,19 +4,10 @@ struct BookingView: View {
     @Environment(\.dismiss) var dissmiss
     let movie: Movie
     
-    @State var movies: [Movie] = []
-    @State var isSelectedTime1 : Bool = false
-    @State var isSelectedTime2 : Bool = false
-    @State var isSelectedTime3 : Bool = false
-    @State var isSelectedTime4 : Bool = false
-    @State var isSelectedTime5 : Bool = false
-    @State var isSelecetedDate1: Bool = false
-    @State var isSelecetedDate2: Bool = false
-    @State var isSelecetedDate3: Bool = false
-    @State var isSelecetedDate4: Bool = false
-    @State var isSelecetedDate5: Bool = false
+    @ObservedObject
+    var viewModel = BookingViewModel()
     
-    @State var isShowingTab: Bool = true
+    
     var gradient = [Color(.black).opacity(0.7), Color(.purple)]
 
     var body: some View {
@@ -69,67 +60,50 @@ struct BookingView: View {
                         }
                         .padding(.horizontal, 20)
                        
-                        HStack{
-                            DateButton(weekDay: "Pon", numDay: "20", width: 50, height: 60, isSelected: $isSelecetedDate1, action: {
-                                withAnimation(.spring()) {
-                                    isSelecetedDate1.toggle()
-                                }
-                            })
-                            
-                            DateButton(weekDay: "Uto", numDay: "21", width: 50, height: 60, isSelected: $isSelecetedDate2, action: {
-                                withAnimation(.spring()) {
-                                    isSelecetedDate2.toggle()
-                                }
-                            })
-                            
-                            DateButton(weekDay: "Sre", numDay: "22", width: 50, height: 60, isSelected: $isSelecetedDate3, action: {
-                                withAnimation(.spring()) {
-                                    isSelecetedDate3.toggle()
-                                }
-                            })
-                            
-                            DateButton(weekDay: "Cet", numDay: "23", width: 50, height: 60, isSelected: $isSelecetedDate4, action: {
-                                withAnimation(.spring()) {
-                                    isSelecetedDate4.toggle()
-                                }
-                            })
-                            
-                            DateButton(weekDay: "Pet", numDay: "24", width: 50, height: 60, isSelected: $isSelecetedDate5, action: {
-                                withAnimation(.spring()) {
-                                    isSelecetedDate5.toggle()
-                                }
-                            })
+                        HStack {
+                            ForEach(viewModel.dates.indices, id: \.self) { index in
+                                DateButton(
+                                    weekDay: viewModel.dates[index].weekDay,
+                                    numDay: viewModel.dates[index].numDay,
+                                    width: viewModel.dates[index].width,
+                                    height: viewModel.dates[index].height,
+                                    isSelected: $viewModel.dates[index].isSelected,
+                                    action: {
+                                        viewModel.toggleDateSelection(index: index)
+                                    }
+                                )
+                            }
                         }
                       
                         
                         HStack{
-                            TimeButton(hour: "17:00", width: 50, height: 50, isSelected: $isSelectedTime1,action: {
+                            TimeButton(hour: "17:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime1,action: {
                                 withAnimation {
-                                    isSelectedTime1.toggle()
+                                    viewModel.isSelectedTime1.toggle()
                                 }
                             })
                             
-                            TimeButton(hour: "18:00", width: 50, height: 50, isSelected: $isSelectedTime2,action: {
+                            TimeButton(hour: "18:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime2,action: {
                                 withAnimation{
-                                    isSelectedTime2.toggle()
+                                    viewModel.isSelectedTime2.toggle()
                                 }
                             })
                             
-                            TimeButton(hour: "19:00", width: 50, height: 50, isSelected: $isSelectedTime3,action: {
+                            TimeButton(hour: "19:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime3,action: {
                                 withAnimation{
-                                    isSelectedTime3.toggle()
+                                    viewModel.isSelectedTime3.toggle()
                                 }
                             })
 
-                            TimeButton(hour: "20:00", width: 50, height: 50, isSelected: $isSelectedTime4,action: {
+                            TimeButton(hour: "20:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime4,action: {
                                 withAnimation{
-                                    isSelectedTime4.toggle()
+                                    viewModel.isSelectedTime4.toggle()
                                 }
                             })
 
-                            TimeButton(hour: "21:00", width: 50, height: 50, isSelected: $isSelectedTime5,action: {
+                            TimeButton(hour: "21:00", width: 50, height: 50, isSelected: $viewModel.isSelectedTime5,action: {
                                 withAnimation{
-                                    isSelectedTime5.toggle()
+                                    viewModel.isSelectedTime5.toggle()
                                 }
                             })
 
@@ -172,7 +146,7 @@ struct BookingView: View {
                     } label: {
                         CustomButton()
                             .frame(height: 50)
-                            .offset(y: (isSelectedTime1 || isSelectedTime2 || isSelectedTime3 || isSelectedTime4 || isSelectedTime5 ) && ( isSelecetedDate1 || isSelecetedDate2 || isSelecetedDate3 || isSelecetedDate4 || isSelecetedDate5  ) ? 0 : 200)
+                            .offset(y: (viewModel.isSelectedTime1 || viewModel.isSelectedTime2 || viewModel.isSelectedTime3 || viewModel.isSelectedTime4 || viewModel.isSelectedTime5 ) && ( viewModel.isSelectedDate1 || viewModel.isSelectedDate2 || viewModel.isSelectedDate3 || viewModel.isSelectedDate4 || viewModel.isSelectedDate5  ) ? 0 : 200)
                         
                     }
       
@@ -199,8 +173,8 @@ struct BookingView: View {
     }
 }
 
-//struct BookingView_Preview: PreviewProvider {
-//    static var previews: some View {
-//        BookingView(movie: Movie.sampleMovie)
-//    }
-//}
+struct BookingView_Preview: PreviewProvider {
+    static var previews: some View {
+        BookingView(movie: Movie.sampleMovie)
+    }
+}

@@ -54,7 +54,6 @@ struct ProfileView: View {
                             
                         }
                         Form{
-                            
                             Section(header: Text("User Info").foregroundColor(.white)
                                 .fontWeight(.semibold)) {
                                     TextField("First Name", text: $viewModel.user.firstName)

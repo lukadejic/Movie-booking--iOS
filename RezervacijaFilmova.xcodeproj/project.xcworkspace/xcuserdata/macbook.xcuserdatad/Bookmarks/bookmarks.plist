@@ -32,16 +32,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    //Nemoj da smaras xCode!!!
-</string>
+				<string></string>
 				<key>leading</key>
 				<string>    
     var currentBorderColors: [Color] = [Color(.blue), Color(.cyan).opacity(0), Color(.cyan).opacity(0)]
-</string>
+    //Nemoj da smaras xCode!!!</string>
 				<key>trailing</key>
-				<string>    var selectedBorderColors: [Color] = [Color(.black), Color(.red).opacity(0.7), Color(.red).opacity(0)]
+				<string>
+    var selectedBorderColors: [Color] = [Color(.black), Color(.red).opacity(0.7), Color(.red).opacity(0)]
     var selectedGradient: [Color] = [Color(.black).opacity(0.6), Color(.red)]
-    
 </string>
 			</dict>
 			<key>title</key>

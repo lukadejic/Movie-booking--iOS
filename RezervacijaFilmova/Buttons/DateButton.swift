@@ -40,5 +40,6 @@ struct DateButton: View {
 }
 
 #Preview {
-    DateButton(isSelected: .constant(true))
+    DateButton(isSelected: .constant(false))
 }
+

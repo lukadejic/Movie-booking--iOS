@@ -19,6 +19,7 @@ struct Movie: Codable, Identifiable , Equatable, Hashable{
     }
 
     static let allMovies : [Movie] = Bundle.main.decode(file: "MoviesAPI.json")
+    
     static let sampleMovie :Movie = allMovies[0]
     
     static let movies1 : [Movie] = [allMovies[0], allMovies[1],allMovies[2],allMovies[3],allMovies[4]]

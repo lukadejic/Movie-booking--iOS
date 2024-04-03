@@ -36,12 +36,12 @@ struct HomeView: View {
 
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack {
-//                            ForEach(Array(viewModel.sectionItems.enumerated()), id: \.element) { index, item in
-//                                ScrollSection(
-//                                    viewModel: ScrollSectionViewModel(
-//                                        title: item.title, movies: viewModel.moviesList[index])
-//                                )
-//                            }
+                            ForEach(Array(viewModel.sectionItems.enumerated()), id: \.element) { index, item in
+                                ScrollSection(
+                                    viewModel: ScrollSectionViewModel(
+                                        title: item.title, movies: viewModel.moviesList[index])
+                                )
+                            }
                         }
                     }
                 }

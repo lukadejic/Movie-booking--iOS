@@ -10,6 +10,7 @@
 		FA0B04BF2BA21C850048E8D9 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B04BE2BA21C850048E8D9 /* VideoPlayerView.swift */; };
 		FA0B04C12BA33F2F0048E8D9 /* CustomChair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B04C02BA33F2F0048E8D9 /* CustomChair.swift */; };
 		FA0B04C52BA350920048E8D9 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B04C42BA350920048E8D9 /* LocationView.swift */; };
+		FA10E5372BBDAD3400A3F957 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10E5362BBDAD3400A3F957 /* BookingViewModel.swift */; };
 		FA5CB1402B9D0B7A00286A59 /* MoviesAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB13F2B9D0B7A00286A59 /* MoviesAPI.json */; };
 		FA5CB1422B9D0D6100286A59 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1412B9D0D6100286A59 /* Movie.swift */; };
 		FA5CB1452B9D12AC00286A59 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB1442B9D12AC00286A59 /* HomeView.swift */; };
@@ -46,6 +47,7 @@
 		FA0B04BE2BA21C850048E8D9 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		FA0B04C02BA33F2F0048E8D9 /* CustomChair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChair.swift; sourceTree = "<group>"; };
 		FA0B04C42BA350920048E8D9 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		FA10E5362BBDAD3400A3F957 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		FA5CB13F2B9D0B7A00286A59 /* MoviesAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MoviesAPI.json; sourceTree = "<group>"; };
 		FA5CB1412B9D0D6100286A59 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FA5CB1442B9D12AC00286A59 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -91,14 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA10E5352BBDACFE00A3F957 /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CB1632B9F6F7E00286A59 /* BookingView.swift */,
+				FA10E5362BBDAD3400A3F957 /* BookingViewModel.swift */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
 		FA5CB1432B9D129900286A59 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA10E5352BBDACFE00A3F957 /* Booking */,
 				FA75D4CE2BB8257400BAC176 /* HomeView */,
-				FA5CB1582B9E4E7B00286A59 /* ProfileView.swift */,
-				FA5CB1632B9F6F7E00286A59 /* BookingView.swift */,
 				FA5CB1712BA09DD500286A59 /* SeatsView.swift */,
 				FA0B04C42BA350920048E8D9 /* LocationView.swift */,
+				FA5CB1582B9E4E7B00286A59 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 		FA7C322E2B9C7F8F002AB479 /* RezervacijaFilmova */ = {
 			isa = PBXGroup;
 			children = (
+				FA5CB1432B9D129900286A59 /* Views */,
 				FA5CB16C2BA07D5800286A59 /* Buttons */,
 				FA5CB1652B9FA26300286A59 /* Cells */,
 				FA5CB1602B9E64C300286A59 /* Alert */,
@@ -199,7 +211,6 @@
 				FA5CB15A2B9E61BD00286A59 /* Model */,
 				FA5CB14F2B9DD04000286A59 /* ScrollSections */,
 				FA5CB1462B9D170000286A59 /* Image */,
-				FA5CB1432B9D129900286A59 /* Views */,
 				FA7C32422B9C82BF002AB479 /* UI */,
 				FA7C323F2B9C8220002AB479 /* Data */,
 				FA7C322F2B9C7F8F002AB479 /* RezervacijaFilmovaApp.swift */,
@@ -272,7 +283,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					FA7C322B2B9C7F8F002AB479 = {
 						CreatedOnToolsVersion = 15.2;
@@ -326,6 +337,7 @@
 				FA5CB1742BA0A3F200286A59 /* StatusUI.swift in Sources */,
 				FA7C32322B9C7F8F002AB479 /* ContentView.swift in Sources */,
 				FA5CB15C2B9E61C800286A59 /* User.swift in Sources */,
+				FA10E5372BBDAD3400A3F957 /* BookingViewModel.swift in Sources */,
 				FA5CB1722BA09DD500286A59 /* SeatsView.swift in Sources */,
 				FA5CB14A2B9D192D00286A59 /* MovieListCell.swift in Sources */,
 				FA5CB1482B9D170A00286A59 /* RemoteImage.swift in Sources */,
@@ -385,6 +397,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -446,6 +459,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -473,6 +487,7 @@
 				CODE_SIGN_ENTITLEMENTS = RezervacijaFilmova/RezervacijaFilmova.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RezervacijaFilmova/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -509,6 +524,7 @@
 				CODE_SIGN_ENTITLEMENTS = RezervacijaFilmova/RezervacijaFilmova.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RezervacijaFilmova/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
